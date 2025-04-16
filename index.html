@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mosa Mabula | OUTsurance Broker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+  <script defer>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const theme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      html.setAttribute("data-theme", theme);
+    }
+  </script>
+
+  <!-- Check -->
+  <script defer>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+    }
+  </script>  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Mosa Mabula</h1>
+      <p>Your Personal OUTsurance Broker</p>
+      <div class="cta-buttons">
+        <a href="#quote" class="btn">Get a Free Quote</a>
+        <a href="https://wa.me/27730084693?text=Hi%20Mosa%2C%20I%27d%20like%20to%20book%20a%20free%20insurance%20consultation." class="btn" target="_blank">Book a Free Call</a>
+        <button class="btn" onclick="toggleTheme()">🌓 Toggle Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hi, I’m Mosa Mabula, an OUTsurance broker dedicated to helping South Africans protect what matters most. Whether you need cover for your car, home, gadgets, or business, I’ll help you get the best deal, with personal service and no pressure.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Insurance Services</h2>
+      <div class="grid">
+        <div class="card"><h3>Business Insurance</h3><p>Cover tailored for your business and liability needs.</p></div>
+        <div class="card"><h3>Car Insurance</h3><p>Comprehensive and affordable protection for your vehicle.</p></div>
+        <div class="card"><h3>Home & Contents</h3><p>Peace of mind for your home and what’s inside it.</p></div>
+        <div class="card"><h3>Gadget Insurance</h3><p>Cover for your tech – phones, laptops, tablets and more.</p></div>
+        <div class="card"><h3>Free Armed Response</h3><p>Emergency protection for you and your family anywhere at no extra cost.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="container">
+      <h2>Why Work With Me?</h2>
+      <ul>
+        <li>Fast, personalized service via phone or WhatsApp</li>
+        <li>R500–R1500 if I can't beat your premium</li>
+        <li>No pressure – just honest, helpful advice</li>
+        <li>Free quotes in minutes</li>
+      </ul>
+      <div class="trusted-badge">Trusted by 10+ South Africans in 2024 🇿🇦</div>
+      
+    </div>
+  </section>
+
+
+  <section id="testimonials">
+    <div class="container">
+      <h2>What Clients Say</h2>
+      <div class="grid">
+        <div class="card">
+          <p>"Mosa was quick, professional and super helpful! Got me a better premium than I expected." – <strong>Thabo M.</strong></p>
+        </div>
+        <div class="card">
+          <p>"Excellent service on WhatsApp and my car is now properly covered. Highly recommend!" – <strong>Candice K.</strong></p>
+        </div>
+        <div class="card">
+          <p>"I had no idea I could get armed response included. Mosa made it all simple." – <strong>Wilma S.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quote">
+    <div class="container">
+      <h2>Get a Free Quote</h2>
+  
+      <form id="quote-form" action="https://formspree.io/f/mpwpeave" method="POST" class="quote-form">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="email" name="email" placeholder="Email Address (optional)" />
+  
+        <select name="insuranceType" required>
+          <option value="">What would you like covered?</option>
+          <option value="Car">Car Insurance</option>
+          <option value="Home">Home & Contents Insurance</option>
+          <option value="Gadget">Gadget Insurance</option>
+          <option value="Business">Business Insurance</option>
+          <option value="Emergency">Free Armed Response</option>
+          <option value="Multiple">Multiple Options</option>
+        </select>
+  
+        <select name="contactPreference" required>
+          <option value="">How should I contact you?</option>
+          <option value="Phone Call">Phone Call</option>
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="Email">Email</option>
+        </select>
+  
+        <input type="text" name="contactTime" placeholder="Preferred contact time (e.g. Today after 5pm)" />
+  
+        <textarea name="message" placeholder="Optional: Share car model, business type, etc."></textarea>
+  
+        <button type="submit" class="btn">Send Request</button>
+      </form>
+  
+      <div id="thank-you-message" style="display: none; text-align: center; padding: 2rem;">
+        <h3>🎉 Thank You!</h3>
+        <p>Your request has been sent. I’ll be in touch shortly!</p>
+        <p>If it’s urgent, feel free to <a href="https://wa.me/27730084693" target="_blank">WhatsApp me directly</a>.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Mosa Mabula | OUTsurance Broker | Centurion</p>
+      <p>Call or WhatsApp: <a href="tel:+27730084693">+27 73 008 4693</a></p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/27730084693?text=Hi%20Mosa%2C%20I%27d%20like%20a%20quick%20insurance%20quote." target="_blank" class="whatsapp-float">
+    💬 Chat
+  </a>
+
+  <script>
+    const form = document.getElementById("quote-form");
+    const thankYou = document.getElementById("thank-you-message");
+  
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+  
+      const formData = new FormData(form);
+  
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
+          }
+        });
+  
+        if (response.ok) {
+          form.style.display = "none";
+          thankYou.style.display = "block";
+        } else {
+          alert("Oops! Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        alert("There was an error. Please check your connection.");
+      }
+    });
+  </script>
+  
+  
+</body>
+</html>
